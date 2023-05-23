@@ -29,10 +29,10 @@ jobs:
       commit_hash: ${{ steps.commit_hash.outputs.commit_hash }}
     steps:
       - uses: actions/checkout@v3
-      - name: Set up JDK 11
-        uses: actions/setup-java@v3
+      - uses: actions/setup-java@v3
         with:
-          java-version: ‘11’
+          distribution: 'oracle'
+          java-version: '11'
       - name: Install ant
         run: sudo apt install -y ant    
       - name: Build with Ant
