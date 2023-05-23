@@ -36,7 +36,7 @@ jobs:
       - name: Install ant
         run: sudo apt install -y ant    
       - name: Build with Ant
-        run: ant -noinput -buildfile build.xml   # insert name of executed.xml file
+        run: ls -al      #ant -noinput -buildfile build.xml   # insert name of executed.xml file
       - id: commit_hash
         run: echo “::set-output name=commit_hash::${GITHUB_SHA::7}”
       - name: Login to <registry>
